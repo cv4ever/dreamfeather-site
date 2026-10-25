@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="theme-color" content="#0f0d1a">
+<link rel="icon" href="/assets/img/icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<header class="bar">
+  <a class="brand" href="/"><img src="/assets/img/icon.png" alt="" width="32" height="32">Dreamfeather</a>
+  <nav><a href="/">Home</a><a href="/privacy/">Privacy</a></nav>
+</header>
+<main class="doc">
+{{ content }}
+</main>
+<footer class="foot">
+  <p><a href="/">Dreamfeather</a> <a href="mailto:hello@dreamfeather.app">Contact</a> <span>© 2026 Carlos Oliveira</span></p>
+</footer>
+</body>
+</html>

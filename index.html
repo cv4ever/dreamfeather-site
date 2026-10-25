@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dreamfeather: lucid dreaming, privately</title>
+<meta name="description" content="A lucid dreaming trainer for Android. Wake-back-to-bed alarm, guided MILD read aloud and a dream journal that finds your dream signs. No account, nothing leaves your phone.">
+<meta name="theme-color" content="#0f0d1a">
+<meta property="og:title" content="Dreamfeather: lucid dreaming, privately">
+<meta property="og:description" content="Wake-back-to-bed alarm, guided MILD and a private dream journal for Android. Pay once, no subscription.">
+<meta property="og:image" content="https://dreamfeather.app/assets/img/og.png">
+<meta property="og:url" content="https://dreamfeather.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/icon.png">
+<link rel="preload" href="/assets/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="brand" href="/"><img src="/assets/img/icon.png" alt="" width="32" height="32">Dreamfeather</a>
+  <nav>
+    <a href="#night">How it works</a>
+    <a href="#price">Price</a>
+    <a href="/privacy/">Privacy</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>Wake up inside your&nbsp;dreams.</h1>
+      <p class="lede">Dreamfeather trains lucid dreaming on Android. A wake-back-to-bed alarm timed for REM, guided MILD read aloud, and a dream journal that learns your dream signs.</p>
+      <p class="lede quiet">No account. No ads. Nothing leaves your phone.</p>
+      <div class="actions">
+        <a class="btn" href="#beta">Join the Android beta</a>
+        <a class="link" href="#night">See a night with Dreamfeather</a>
+      </div>
+      <p class="fine">Free for 14 days, then one purchase. No subscription.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="moon"></div>
+      <svg class="feather" viewBox="0 0 64 200" width="64" height="200">
+        <defs>
+          <linearGradient id="vane" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e9e4ff"/>
+            <stop offset=".55" stop-color="#cbc3f2"/>
+            <stop offset="1" stop-color="#a8d8c4"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#vane)" d="M33 4c19 22 26 62 17 104-4 19-10 36-17 50-7-15-17-42-19-74C12 50 20 22 33 4z"/>
+        <path fill="none" stroke="#0f0d1a" stroke-opacity=".35" stroke-width="1.6" d="M33 40l-12 9M33 62l15 8M33 86l-16 10M33 110l13 9M32 132l-9 8"/>
+        <path fill="none" stroke="#f4f1ff" stroke-width="2.2" stroke-linecap="round" d="M33 8c2 60 1 120-4 188"/>
+      </svg>
+    </div>
+    <figure class="phone hero-phone">
+      <img src="/assets/img/01-tonight.webp" alt="Dreamfeather home screen: last night 10 hours 4 minutes, a Start sleep button and weekly stats" width="804" height="1571">
+    </figure>
+  </section>
+
+  <section class="promise" aria-label="Privacy">
+    <ul>
+      <li><strong>No account</strong><span>Open it and start. There is nothing to sign up for.</span></li>
+      <li><strong>No tracking</strong><span>No ads, no analytics, no third-party SDKs watching you sleep.</span></li>
+      <li><strong>Stays on your phone</strong><span>Works offline. Your journal leaves only when you export it.</span></li>
+      <li><strong>Locked if you want</strong><span>Fingerprint, face or screen lock keeps your dreams yours.</span></li>
+    </ul>
+  </section>
+
+  <section class="night" id="night">
+    <div class="night-intro">
+      <h2>One night with Dreamfeather</h2>
+      <p>Lucid dreams mostly happen in REM sleep, which gets longer toward morning. Each tool fits a moment of the night, so you only do what helps, when it helps.</p>
+    </div>
+
+    <ol class="timeline">
+      <li class="step">
+        <p class="when">Lights out</p>
+        <div class="step-copy">
+          <h3>Bedtime in one tap</h3>
+          <p>Pick a wake time, an optional sleep sound and the wake-back-to-bed alarm. Breathe with the moon while it grows and shrinks, then put the phone down.</p>
+        </div>
+        <figure class="phone"><img src="/assets/img/02-bedtime.webp" alt="Bedtime screen in red-night colors with wake time 23:45" width="804" height="1571" loading="lazy"></figure>
+      </li>
+
+      <li class="step red">
+        <p class="when">While you sleep</p>
+        <div class="step-copy">
+          <h3>A red screen that keeps your eyes dark</h3>
+          <p>Red light barely disturbs melatonin, so the night screen glows red, never white. Woke up? Log a fragment or pause tracking without flooding the room with light.</p>
+        </div>
+        <figure class="phone">
+          <video src="/assets/img/red-night.mp4" poster="/assets/img/red-night-poster.webp" autoplay muted loop playsinline preload="none" aria-label="The red night screen counting sleep time with a Log dream button"></video>
+        </figure>
+      </li>
+
+      <li class="step">
+        <p class="when">About 4½ hours in</p>
+        <div class="step-copy">
+          <h3>Wake back to bed</h3>
+          <p>The classic lucid dreaming technique, timed for you. A gentle alarm wakes you a few hours after you fall asleep. Stay up a few minutes, then go back to bed. The second sleep is mostly REM, which is where lucid dreams start.</p>
+          <p class="aside">It rings over the lock screen with big snooze and stop buttons you can hit half asleep.</p>
+        </div>
+        <figure class="phone"><img src="/assets/img/03-wbtb.webp" alt="Wake back to bed settings: rings 4.5 hours after you fall asleep" width="804" height="1602" loading="lazy"></figure>
+      </li>
+
+      <li class="step">
+        <p class="when">Back under the covers</p>
+        <div class="step-copy">
+          <h3>Guided MILD, read aloud</h3>
+          <p>Replay the dream you just had, spot what was strange, and repeat your intention with each breath. Dreamfeather speaks every step so you can follow with your eyes closed. SSILD is there too, if you prefer it.</p>
+        </div>
+        <figure class="phone"><img src="/assets/img/04-mild.webp" alt="Guided MILD screen with Read it to me switched on and steps Recall and Spot the sign" width="804" height="1602" loading="lazy"></figure>
+      </li>
+
+      <li class="step dawn">
+        <p class="when">First light</p>
+        <div class="step-copy">
+          <h3>Catch the dream before it fades</h3>
+          <p>Write or dictate it the moment you wake. Mark it lucid, rate your recall and tag the people, places and situations that keep coming back. Patterns counts the words that recur across your dreams, right on your phone.</p>
+        </div>
+        <figure class="phone"><img src="/assets/img/05-dreams.webp" alt="Dream journal: 12 dreams, 4 lucid, top dream sign hands in 5 dreams" width="804" height="1491" loading="lazy"></figure>
+      </li>
+
+      <li class="step dawn">
+        <p class="when">Through the day</p>
+        <div class="step-copy">
+          <h3>Reality checks and honest history</h3>
+          <p>Gentle reminders at random times ask you to check whether you are dreaming, naming your own dream signs. History shows your nights, dreams and lucid rate by week and month, with streaks and badges along the way.</p>
+          <p class="aside">Wear a watch? Health Connect can import its nights and export the ones you log.</p>
+        </div>
+        <figure class="phone"><img src="/assets/img/06-history.webp" alt="History screen: 7 hour 41 minute average night, recall and reality checks" width="804" height="1602" loading="lazy"></figure>
+      </li>
+    </ol>
+  </section>
+
+  <section class="price" id="price">
+    <h2>Pay once. Keep it.</h2>
+    <p class="price-lede">Every install gets everything free for 14 days. After that, the essentials stay free forever and one purchase unlocks the rest for good.</p>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Free forever</h3>
+        <ul>
+          <li>Sleep log with pause and wake alarm</li>
+          <li>Dream journal, search and dictation</li>
+          <li>Reality checks and reminders</li>
+          <li>App lock</li>
+          <li>PDF, text and backup export</li>
+        </ul>
+      </div>
+      <div class="tier pro">
+        <h3>Dreamfeather Pro</h3>
+        <p class="cost"><span class="amount">$6.99</span> once, priced locally by Google Play</p>
+        <ul>
+          <li>Wake-back-to-bed alarm and night cue</li>
+          <li>Guided MILD and SSILD, read aloud</li>
+          <li>Patterns across your dreams</li>
+          <li>Health Connect sync</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="beta" id="beta">
+    <h2>Tonight is a good night to start.</h2>
+    <p>Dreamfeather is in testing on Google Play. Joining takes a minute.</p>
+    <ol class="join">
+      <li><a href="https://groups.google.com/g/dreamfeather-testers">Join the tester group</a> with your Google account.</li>
+      <li><a href="https://play.google.com/apps/testing/eu.forextradingtools.dreamfeather">Opt in on Google Play</a>, then install the app.</li>
+    </ol>
+    <a class="btn" href="https://groups.google.com/g/dreamfeather-testers">Join the Android beta</a>
+    <p class="fine">Android 9 or newer. Questions or ideas: <a href="mailto:hello@dreamfeather.app">hello@dreamfeather.app</a></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Dreamfeather is not a medical device. It doesn't measure sleep stages and isn't meant to diagnose or treat any sleep condition.</p>
+  <p><a href="/privacy/">Privacy policy</a> <a href="mailto:hello@dreamfeather.app">Contact</a> <span>© 2026 Carlos Oliveira</span></p>
+</footer>
+<script>
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches)
+    document.querySelectorAll("video").forEach(v => { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+</script>
+</body>
+</html>
