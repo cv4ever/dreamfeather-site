@@ -51,12 +51,24 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--seaglass); outlin
     radial-gradient(1px 1px at 76% 78%, #a8d8c499 50%, transparent 52%);
   background-size: 270px 310px;
 }
+.stars { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+section[id] { scroll-margin-top: 4.5rem; }
 
 /* Header */
 .bar {
+  position: sticky; top: 0; z-index: 10;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   max-width: 72rem; margin: 0 auto; padding: 1.25rem 1.5rem;
+  transition: padding .3s ease;
 }
+.bar::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 calc(50% - 50vw);
+  background: #0f0d1ab8; backdrop-filter: blur(14px) saturate(1.3); -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  border-bottom: 1px solid #cbc3f21c;
+  opacity: 0; transition: opacity .3s ease;
+}
+.bar.scrolled { padding-block: .8rem; }
+.bar.scrolled::before { opacity: 1; }
 .brand {
   display: flex; align-items: center; gap: .6rem;
   color: var(--mist); text-decoration: none;
@@ -99,13 +111,20 @@ h1 {
 .moon {
   position: absolute; right: 31%; top: 0; width: 6.5rem; aspect-ratio: 1; border-radius: 50%;
   background: radial-gradient(circle at 38% 38%, #ffe2c9, var(--dawn) 60%, #c98b6a);
-  box-shadow: 0 0 90px 30px #f0b89233;
   -webkit-mask: radial-gradient(circle at 72% 32%, transparent 38%, #000 39%);
           mask: radial-gradient(circle at 72% 32%, transparent 38%, #000 39%);
   opacity: .9;
+  translate: calc(var(--px, 0) * -18px) calc(var(--py, 0) * -12px);
+  animation: moonbreath 9s ease-in-out infinite;
+}
+/* The app's bedtime moon breathes; this one does too, slowly. */
+@keyframes moonbreath {
+  0%, 100% { scale: 1; opacity: .85; }
+  50% { scale: 1.06; opacity: 1; }
 }
 .feather {
   position: absolute; left: 50%; top: -14rem; width: 3.25rem; height: auto;
+  translate: calc(var(--px, 0) * 34px) calc(var(--py, 0) * 20px);
   filter: drop-shadow(0 0 18px #cbc3f266);
   animation: drift 26s cubic-bezier(.45, 0, .55, 1) infinite;
 }
@@ -120,13 +139,41 @@ h1 {
 
 /* Phone frame around the app screenshots */
 .phone {
+  position: relative;
   margin: 0; width: min(19rem, 100%); aspect-ratio: 804 / 1600;
   padding: .55rem; border-radius: 2.75rem;
   background: #08070e;
   box-shadow: 0 0 0 1px #cbc3f238, 0 40px 80px -30px #000c, 0 0 120px -10px #7a68e044;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .8s cubic-bezier(.2, .8, .2, 1);
 }
+.phone.tilting { transition-duration: .15s; }
+/* Moonlight sheen that follows the cursor across the glass. */
+.phone::after {
+  content: ""; position: absolute; inset: .55rem; border-radius: 2.25rem; pointer-events: none;
+  background: radial-gradient(circle at var(--mx, 30%) var(--my, 20%), #ffffff2e, transparent 45%);
+  mix-blend-mode: screen; opacity: 0; transition: opacity .4s ease;
+}
+.phone.tilting::after { opacity: 1; }
 .phone img, .phone video { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 2.25rem; }
-.hero-phone { justify-self: center; position: relative; transform: rotate(3deg); width: min(20rem, 100%); }
+
+/* The hero phone floats like something light caught on a night breeze. */
+.drift {
+  justify-self: center; width: min(20rem, 100%);
+  translate: calc(var(--px, 0) * 14px) calc(var(--py, 0) * 10px);
+  animation: breeze 11s ease-in-out infinite;
+  transform-origin: 50% 0;
+}
+.hero-phone { width: 100%; }
+@keyframes breeze {
+  0%   { transform: translate(0, 0) rotate(3deg) skewY(0deg); }
+  18%  { transform: translate(-6px, -14px) rotate(.5deg) skewY(-.6deg); }
+  36%  { transform: translate(4px, -22px) rotate(4.5deg) skewY(.4deg); }
+  52%  { transform: translate(10px, -8px) rotate(5.5deg) skewY(.8deg); }
+  70%  { transform: translate(-2px, -18px) rotate(1.5deg) skewY(-.4deg); }
+  86%  { transform: translate(-8px, -6px) rotate(2deg) skewY(-.2deg); }
+  100% { transform: translate(0, 0) rotate(3deg) skewY(0deg); }
+}
 
 /* Privacy promise */
 .promise { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
@@ -193,6 +240,38 @@ h3 { font-size: clamp(1.75rem, 3vw, 2.4rem); line-height: 1.1; }
 .cost { margin: .5rem 0 0; color: var(--muted); font-size: .95rem; }
 .amount { font: 500 2.25rem/1 var(--display); color: var(--mist); margin-right: .35rem; }
 
+/* Questions */
+.faq { max-width: 46rem; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+.faq h2 { margin-bottom: 2rem; }
+.faq details { border-bottom: 1px solid #cbc3f226; }
+.faq summary {
+  list-style: none; cursor: pointer; position: relative;
+  padding: 1.25rem 2.5rem 1.25rem 0;
+  font: 500 1.3rem/1.3 var(--display); font-variation-settings: "SOFT" 100;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "✦"; position: absolute; right: .25rem; top: 1.3rem; color: var(--lavender);
+  transition: rotate .4s ease, color .4s ease;
+}
+.faq details[open] summary::after { rotate: 135deg; color: var(--dawn); }
+.faq summary:hover { color: #fff; }
+.faq summary:focus-visible { outline: 2px solid var(--seaglass); outline-offset: 4px; border-radius: 6px; }
+.faq details p { margin: 0 0 1.5rem; color: #ddd6ec; max-width: 40rem; }
+
+/* Scroll reveals, only when JS is present and motion is welcome. */
+.reveal .step .when, .reveal .step .step-copy { opacity: 0; translate: 0 24px; transition: opacity .9s ease, translate 1.1s cubic-bezier(.2, .8, .2, 1); }
+.reveal .step .step-copy { transition-delay: .12s; }
+.reveal .step .phone {
+  opacity: 0; translate: 0 60px; rotate: 4deg;
+  transition: opacity 1s ease, translate 1.3s cubic-bezier(.2, .8, .2, 1), rotate 1.3s cubic-bezier(.2, .8, .2, 1), transform .8s cubic-bezier(.2, .8, .2, 1);
+}
+.reveal .tier { opacity: 0; translate: 0 30px; transition: opacity .9s ease, translate 1.1s cubic-bezier(.2, .8, .2, 1); }
+.reveal .tier.pro { transition-delay: .15s; }
+.reveal .in .when, .reveal .in .step-copy, .reveal .in .phone, .reveal .tier.in { opacity: 1; translate: 0 0; rotate: 0deg; }
+.reveal .step .when::before { scale: .4; transition: scale .8s cubic-bezier(.3, 1.6, .5, 1) .2s; }
+.reveal .step.in .when::before { scale: 1; }
+
 /* Beta */
 .beta { max-width: 44rem; margin: 0 auto; padding: 5rem 1.5rem 6rem; text-align: center; }
 .beta > p { color: #eadbe2; font-size: 1.15rem; margin: 1rem 0 0; }
@@ -213,7 +292,7 @@ h3 { font-size: clamp(1.75rem, 3vw, 2.4rem); line-height: 1.1; }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; padding: 5.5rem 1.5rem 4rem; gap: 3.5rem; }
-  .hero-phone { transform: rotate(2deg); width: min(17rem, 80vw); }
+  .drift { width: min(17rem, 80vw); }
   .moon { width: 4rem; right: 1.5rem; top: .5rem; }
   .feather { left: 70%; }
   .promise ul { grid-template-columns: 1fr 1fr; }
@@ -222,7 +301,7 @@ h3 { font-size: clamp(1.75rem, 3vw, 2.4rem); line-height: 1.1; }
   .tiers { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
-  .bar nav a:not([href="/privacy/"]) { display: none; }
+  .bar nav a:not([href="/privacy/"]):not([href="#faq"]) { display: none; }
   .promise ul { grid-template-columns: 1fr; gap: 1.25rem; }
   .step { padding-left: 2.25rem; }
   .when::before { left: -2.25rem; }
@@ -231,5 +310,7 @@ h3 { font-size: clamp(1.75rem, 3vw, 2.4rem); line-height: 1.1; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .feather { animation: none; top: 4rem; transform: rotate(-18deg); }
+  .drift { animation: none; transform: rotate(3deg); }
+  .moon { animation: none; }
   .btn { transition: none; }
 }

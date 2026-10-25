@@ -1,6 +1,7 @@
 ---
 title: Dreamfeather privacy policy
 permalink: /privacy/
+description: Dreamfeather collects no data. No account, no analytics, no ads. Your sleep log and dream journal stay on your phone.
 ---
 
 # Dreamfeather privacy policy

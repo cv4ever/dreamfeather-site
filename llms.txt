@@ -1,0 +1,37 @@
+# Dreamfeather
+
+> Dreamfeather is a private lucid dreaming app for Android 9 and newer. It combines a wake-back-to-bed (WBTB) alarm timed for REM sleep, guided MILD and SSILD read aloud, reality check reminders, a sleep log and a dream journal that finds recurring dream signs. There is no account, no ads and no analytics, it works offline, and data stays on the phone. It is free for 14 days, then core features stay free and a one-time purchase ($6.99 in the US) unlocks Pro. No subscription.
+
+Made by Carlos Oliveira. Contact: hello@dreamfeather.app. Android package: eu.forextradingtools.dreamfeather. Status: in testing on Google Play.
+
+## Features
+
+- Wake back to bed: an alarm a set time (for example 4.5 hours) after you fall asleep, when the second sleep is mostly REM. Rings over the lock screen with large snooze and stop buttons.
+- Night cue: optional quiet reminders during the REM window (Pro).
+- Guided MILD and SSILD: step by step and spoken aloud so you can follow with your eyes closed (Pro).
+- Reality checks: reminders at random times during the day that name your own dream signs.
+- Dream journal: write or dictate, mark lucid dreams, rate recall, add feelings and tags, search and filter, export to PDF or text.
+- Patterns: the words that recur across your dreams, counted on the phone (Pro).
+- Sleep log: tap start and wake, pause if you wake in the night; a dim red-night screen; weekly and monthly history, streaks and badges.
+- Health Connect: import nights from a watch and export logged nights (Pro).
+- App lock with fingerprint, face or screen lock; JSON backup and restore.
+
+## Pricing
+
+- Free: all features for 14 days; afterwards sleep log, dream journal, reality checks, reminders, app lock and exports stay free.
+- Dreamfeather Pro: one-time purchase, $6.99 in the US, priced locally by Google Play. Unlocks WBTB alarm and night cue, guided MILD and SSILD, Patterns and Health Connect.
+
+## Limits
+
+Dreamfeather is not a medical device. It does not measure sleep stages from phone sensors and is not meant to diagnose or treat any sleep condition.
+
+## Evidence behind the method
+
+WBTB combined with MILD is the best-supported beginner technique. Erlacher and Stumbrys (2020) reported about 53% lucid dreams with WBTB plus MILD in a small lab sample versus 9% in a reading control group; a 2022 replication found a weaker effect when wake timing shifted.
+
+## Links
+
+- [Home page](https://dreamfeather.app/)
+- [Privacy policy](https://dreamfeather.app/privacy/)
+- [Join the tester group](https://groups.google.com/g/dreamfeather-testers)
+- [Opt in on Google Play](https://play.google.com/apps/testing/eu.forextradingtools.dreamfeather)

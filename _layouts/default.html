@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: 'Dreamfeather, a private lucid dreaming app for Android.' }}">
+<link rel="canonical" href="https://dreamfeather.app{{ page.url }}">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dreamfeather">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:url" content="https://dreamfeather.app{{ page.url }}">
+<meta property="og:image" content="https://dreamfeather.app/assets/img/og.png">
 <meta name="theme-color" content="#0f0d1a">
 <link rel="icon" href="/assets/img/icon.png">
 <link rel="stylesheet" href="/assets/site.css">
