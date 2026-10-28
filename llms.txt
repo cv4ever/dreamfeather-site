@@ -1,6 +1,6 @@
 # Dreamfeather
 
-> Dreamfeather is a private lucid dreaming app for Android 9 and newer. It combines a wake-back-to-bed (WBTB) alarm timed for REM sleep, guided MILD and SSILD read aloud, reality check reminders, a sleep log and a dream journal that finds recurring dream signs. There is no account, no ads and no analytics, it works offline, and data stays on the phone. It is free for 14 days, then core features stay free and a one-time purchase ($6.99 in the US) unlocks Pro. No subscription.
+> Dreamfeather is a private lucid dreaming app for Android 9 and newer. It combines a wake-back-to-bed (WBTB) alarm timed for REM sleep, guided MILD and SSILD read aloud, reality check reminders, a sleep log and a dream journal that finds recurring dream signs. There is no Dreamfeather account, no ads and no analytics SDK. Sleep logging, typed journaling and alarms work offline. Google Play handles purchases and ownership checks; optional speech providers may process audio or text online. Users control file exports and Health Connect access. It is free for 14 days, then core features stay free and a one-time purchase unlocks Pro. No subscription.
 
 Made by Carlos Oliveira. Contact: hello@dreamfeather.app. Android package: eu.forextradingtools.dreamfeather. Status: in testing on Google Play.
 
@@ -24,6 +24,8 @@ Made by Carlos Oliveira. Contact: hello@dreamfeather.app. Android package: eu.fo
 ## Limits
 
 Dreamfeather is not a medical device. It does not measure sleep stages from phone sensors and is not meant to diagnose or treat any sleep condition.
+
+Sleep and journal records are stored on the phone, not on a developer-operated server. Google Play handles purchase records. Settings → Delete all data retains the trial start and last purchase status; it does not delete exports, Health Connect records, support emails or Google records. The privacy policy describes these exceptions and how to manage them.
 
 ## Evidence behind the method
 
