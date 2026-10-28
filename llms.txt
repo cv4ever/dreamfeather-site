@@ -19,7 +19,7 @@ Made by Carlos Oliveira. Contact: hello@dreamfeather.app. Android package: eu.fo
 ## Pricing
 
 - Free: all features for 14 days; afterwards sleep log, dream journal, reality checks, reminders, app lock and exports stay free.
-- Dreamfeather Pro: one-time purchase, $6.99 in the US, priced locally by Google Play. Unlocks WBTB alarm and night cue, guided MILD and SSILD, Patterns and Health Connect.
+- Dreamfeather Pro: one-time purchase, $9.99 in the US, priced locally by Google Play. Unlocks WBTB alarm and night cue, guided MILD and SSILD, Patterns and Health Connect.
 
 ## Limits
 
