@@ -1,0 +1,16 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  claims:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check advertised claims and prices
+        run: python3 scripts/check_claims.py index.html privacy.md llms.txt
